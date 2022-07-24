@@ -14,39 +14,62 @@ const {
 
 } = require('../../controllers/thought-controller');
 
-//TODO: ROUTE TO GET ALL THOUGHTS
-router.get('/', (req,res)=> {
+// THOUGHT ROUTERS
 
-})
+// <GET> = /api/thought - Get all Thoughts
+router.route('/').get(getAllthoughts);
 
-//TODO: ROUTE TO CREATE A NEW THOUGHT
-router.post('/', (req,res)=> {
+// <POST> = /api/thought- Create NEW Thought
+router.route('/').post(createThought);
 
-});
+// <GET, PUT, DELETE> = /api/thought/:id 
+router.route('/:id') 
+.get(getThoughtbyId) // single thought
+.put(updateThought) // update thought
+.delete(deleteThought); // delete thought
 
-//TODO: ROUTE TO GET SINGLE THOUGHT BASED ON THOUGHT ID
-router.get('/:thoughtId', (req,res)=> {
+// REACTION ROUTERS
 
-})
+// <POST> = /api/thought/:thoughtId/reactions
+router.route(':thoughtId/reactions').post(addReaction);
 
-//TODO: ROUTE TO UPDATE A THOUGHT
-router.put('/', (req,res)=> {
-
-})
-
-//TODO: ROUTE TO DELETE A THOUGHT BASED ON THOUGHT ID
-router.delete('/:thoughtId', (req,res)=> {
-
-});
-
-//TODO: ROUTE TO ADD REACTION TO A THOUGHT
-router.post('/:thoughtId/reactions', (req,res)=> {
-
-});
-
-//TODO: ROUTE TO DELETE A REACTION ON A THOUGHT
-router.delete('/:thoughtId/reactions/:reactionId', (req,res)=> {
-
-})
+// <DELETE> = /api/thoughts/:thoughtId/reactionId
+router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
 
 module.exports = router;
+
+
+// //TODO: ROUTE TO GET ALL THOUGHTS
+// router.get('/', (req,res)=> {
+
+// })
+
+// //TODO: ROUTE TO CREATE A NEW THOUGHT
+// router.post('/', (req,res)=> {
+
+// });
+
+// //TODO: ROUTE TO GET SINGLE THOUGHT BASED ON THOUGHT ID
+// router.get('/:thoughtId', (req,res)=> {
+
+// })
+
+// //TODO: ROUTE TO UPDATE A THOUGHT
+// router.put('/', (req,res)=> {
+
+// })
+
+// //TODO: ROUTE TO DELETE A THOUGHT BASED ON THOUGHT ID
+// router.delete('/:thoughtId', (req,res)=> {
+
+// });
+
+// //TODO: ROUTE TO ADD REACTION TO A THOUGHT
+// router.post('/:thoughtId/reactions', (req,res)=> {
+
+// });
+
+// //TODO: ROUTE TO DELETE A REACTION ON A THOUGHT
+// router.delete('/:thoughtId/reactions/:reactionId', (req,res)=> {
+
+// })
