@@ -14,7 +14,7 @@ const {
 
 } = require('../../controllers/thought-controller');
 
-// THOUGHT ROUTERS
+// THOUGHT ROUTES
 
 // <GET> = /api/thought - Get all Thoughts
 router.route('/').get(getAllthoughts);
