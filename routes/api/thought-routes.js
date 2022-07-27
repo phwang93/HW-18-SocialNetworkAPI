@@ -31,7 +31,7 @@ router.route('/:id')
 // REACTION ROUTERS
 
 // <POST> = /api/thought/:thoughtId/reactions
-router.route(':thoughtId/reactions').post(addReaction);
+router.route('/:thoughtId/reactions').post(addReaction);
 
 // <DELETE> = /api/thought/:thoughtId/reactionId
 router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction);
