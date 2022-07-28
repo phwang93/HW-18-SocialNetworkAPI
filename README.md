@@ -29,7 +29,7 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 ```
 ## Deployed URL for the Application 
 
-[Heroku] for the application: [Video]().
+[Heroku] for the application: [Video](https://youtu.be/jMBa5A6An2c).
 ## Table of Contents
 
 - [HW-18-SocialNetworkAPI](#hw-18-socialnetworkapi)
@@ -80,4 +80,4 @@ If you have any questions, please contact me at:
 * Email: [pshwang93@gmail.com](mailto:pshwang93@gmail.com). 
 * GitHub: [phwang93](https://github.com/phwang93).
 * Repo: [HW-18-SocialNetworkAPI](https://github.com/phwang93/Homework-18-SocialNetworkAPI).
-* Video: [Social Network API Demo]().
+* Video: [Social Network API Demo](https://youtu.be/jMBa5A6An2c).
